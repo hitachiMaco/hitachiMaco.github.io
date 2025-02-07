@@ -9,7 +9,7 @@
 
   
 
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":true};</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":30};</script>
   
   <title>
     
@@ -61,6 +61,10 @@
 <link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
 
   
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css">
+
   
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -122,28 +126,28 @@
           <div class="main-nav-icon icon rotate">
             &#xe62b;
           </div>
-          <a class="main-nav-link" href="/">Home</a>
+          <a class="main-nav-link" href="/">ホーム</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
             &#xe62b;
           </div>
-          <a class="main-nav-link" href="/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">アーカイブ</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
             &#xe62b;
           </div>
-          <a class="main-nav-link" href="/about">About</a>
+          <a class="main-nav-link" href="/about">プロフィール</a>
         </span>
       
         <span class="main-nav-link-wrap">
           <div class="main-nav-icon icon rotate">
             &#xe62b;
           </div>
-          <a class="main-nav-link" href="/friend">Friend</a>
+          <a class="main-nav-link" href="/friend">フレンド</a>
         </span>
       
     
@@ -151,7 +155,7 @@
   </nav>
   <nav id="sub-nav">
     
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSSフィード" target="_blank"></a>
     
     
     
@@ -188,9 +192,25 @@
   </div>
 </header>
 
-        <div id="content"  class="sidebar-right" >
+        <div id="content" class="sidebar-left"  >
           <aside id="sidebar">
   
+  
+    <meting-js
+      theme="var(--color-link)"
+      id="13282817727"
+      server="netease"
+      type="playlist"
+      
+      
+      
+      
+      order="random"
+      
+      volume="0.2"
+      
+      list-folded="true"
+    ></meting-js>
   
   <div class="sidebar-wrapper ">
     <div class="sidebar-wrap" data-aos="fade-up">
@@ -202,16 +222,16 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div>
+    <div>投稿</div>
     <div class="sidebar-state-number">1</div>
   </div>
   <div class="sidebar-state-category">
-    <div>Categories</div>
-    <div class="sidebar-state-number">0</div>
+    <div>カテゴリ</div>
+    <div class="sidebar-state-number">1</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>Tags</div>
-    <div class="sidebar-state-number">0</div>
+    <div>タグ</div>
+    <div class="sidebar-state-number">1</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -221,35 +241,35 @@
   
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="ホーム"></a>
         <div class="sidebar-menu-icon icon rotate">
           &#xe62b;
         </div>
-        <div class="sidebar-menu-link">Home</div>
+        <div class="sidebar-menu-link">ホーム</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="アーカイブ"></a>
         <div class="sidebar-menu-icon icon rotate">
           &#xe62b;
         </div>
-        <div class="sidebar-menu-link">Archives</div>
+        <div class="sidebar-menu-link">アーカイブ</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="プロフィール"></a>
         <div class="sidebar-menu-icon icon rotate">
           &#xe62b;
         </div>
-        <div class="sidebar-menu-link">About</div>
+        <div class="sidebar-menu-link">プロフィール</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="フレンド"></a>
         <div class="sidebar-menu-icon icon rotate">
           &#xe62b;
         </div>
-        <div class="sidebar-menu-link">Friend</div>
+        <div class="sidebar-menu-link">フレンド</div>
       </div>
     
   
@@ -271,31 +291,29 @@
     <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
     
-      <a class="post-link" href="/2025/02/07/hello-world/" aria-label="Hello World"></a>
+      <a class="post-link" href="/2025/02/07/hello-blog/" aria-label="hello blog!"></a>
     
     
     <div class="post-cover-left">
       
         
         
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="Hello World" class="lazyload">
+          <img data-src="https://d-sketon.top/img/backimg/bg1.jpg" data-sizes="auto" alt="hello blog!" class="lazyload">
         
       
     </div>
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-02-07</span>
-        <span><span class="icon-pencil"></span>75 words</span>
+        <span><span class="icon-pencil"></span>10 words</span>
         <span><span class="icon-clock"></span>1 min</span>
       </div>
-      <h2 class="post-title">Hello World</h2>
+      <h2 class="post-title">hello blog!</h2>
       <article class="post-article">
         
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &amp;quot;My New Post&amp;quot;
+          测试功能啊飒飒的
 
-More info: Writing
-Run server1$ hexo ser
+1print(x)
         
       </article>
     </div>
@@ -330,7 +348,7 @@ Run server1$ hexo ser
     
       <div>
         <span class="icon-brush"></span>
-        75
+        10
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         00:01
@@ -341,10 +359,10 @@ Run server1$ hexo ser
     
       <div>
         <span class="icon-eye"></span>
-        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        <span id="busuanzi_container_site_pv">総閲覧数&nbsp;<span id="busuanzi_value_site_pv"></span></span>
         &nbsp;|&nbsp;
         <span class="icon-user"></span>
-        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+        <span id="busuanzi_container_site_uv">総閲覧者数&nbsp;<span id="busuanzi_value_site_uv"></span></span>
       </div>
     
   </div>
@@ -368,16 +386,16 @@ Run server1$ hexo ser
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Posts</div>
+    <div>投稿</div>
     <div class="sidebar-state-number">1</div>
   </div>
   <div class="sidebar-state-category">
-    <div>Categories</div>
-    <div class="sidebar-state-number">0</div>
+    <div>カテゴリ</div>
+    <div class="sidebar-state-number">1</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>Tags</div>
-    <div class="sidebar-state-number">0</div>
+    <div>タグ</div>
+    <div class="sidebar-state-number">1</div>
   </div>
 </div>
 <div class="sidebar-social">
@@ -387,35 +405,35 @@ Run server1$ hexo ser
   
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="Home"></a>
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="ホーム"></a>
         <div class="sidebar-menu-icon icon rotate">
           &#xe62b;
         </div>
-        <div class="sidebar-menu-link">Home</div>
+        <div class="sidebar-menu-link">ホーム</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="Archives"></a>
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="アーカイブ"></a>
         <div class="sidebar-menu-icon icon rotate">
           &#xe62b;
         </div>
-        <div class="sidebar-menu-link">Archives</div>
+        <div class="sidebar-menu-link">アーカイブ</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="About"></a>
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="プロフィール"></a>
         <div class="sidebar-menu-icon icon rotate">
           &#xe62b;
         </div>
-        <div class="sidebar-menu-link">About</div>
+        <div class="sidebar-menu-link">プロフィール</div>
       </div>
     
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="Friend"></a>
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="フレンド"></a>
         <div class="sidebar-menu-icon icon rotate">
           &#xe62b;
         </div>
-        <div class="sidebar-menu-link">Friend</div>
+        <div class="sidebar-menu-link">フレンド</div>
       </div>
     
   
@@ -478,11 +496,103 @@ Run server1$ hexo ser
 
 
 
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  <script>
+    function loadScripts(scripts, index) {
+      if (index < scripts.length) {
+        const script = scripts[index];
+        const src = script.getAttribute('src');
+
+        const loadScript = (scriptContent) => {
+          const scriptElement = document.createElement('script');
+          if (script.type) {
+            scriptElement.type = script.type;
+          }
+          scriptElement.text = scriptContent;
+          document.head.appendChild(scriptElement);
+          loadScripts(scripts, index + 1);
+        }
+
+        if (src) {
+          fetch(src)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+              }
+              return response.text();
+            })
+            .then(scriptContent => {
+              loadScript(scriptContent);
+            })
+            .catch(error => {
+              console.error('Failed to load script:', src, error);
+            });
+        } else {
+          loadScript(script.text);
+        }
+      }
+    }
+    window.Pjax && new window.Pjax({
+      selectors: [
+        "#header>img",
+        "#header>picture",
+        "head title",
+        "#header-title",
+        "#subtitle-wrap",
+        "#main",
+        "#content",
+        ".sidebar-widget",
+        ".sidebar-wrapper",
+        '#mobile-nav',
+        '#lazy-script'
+      ],
+      switches: {
+        "#content": function(oldEl, newEl) {
+          // for sidebar change
+          oldEl.className = newEl.className;
+          this.onSwitch();
+        },
+        "#header-title": Pjax.switches.outerHTML,
+        "#subtitle-wrap": Pjax.switches.outerHTML,
+        "#main": function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.outerHTML = newEl.outerHTML
+          this.onSwitch()
+        },
+        "#mobile-nav": Pjax.switches.outerHTML,
+        '#lazy-script': function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.innerHTML = newEl.innerHTML
+          this.onSwitch()
+        },
+      },
+      cacheBust: false
+    })
+  </script>
+  
+<script src="/js/pjax.js"></script>
 
 
 
 
 
+
+
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
 
 
 <div id="lazy-script">
@@ -532,7 +642,17 @@ Run server1$ hexo ser
 
 
 
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script>
 
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js" integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8+0maanw1S&#x2F;IyB+Y4JG+ZDU7GpKE8" crossorigin="anonymous"></script>
+
+  
 
   </body>
   </html>
