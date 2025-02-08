@@ -28,7 +28,7 @@ var scrollIntoViewAndWait = (element) => {
 
 // anchor
 _$$(
-  ".article-entry h1>a, .article-entry h2>a, .article-entry h3>a, .article-entry h4>a, .article-entry h5>a, .article-entry h6>a"
+  ".article-entry h1>a, .article-entry h2>a, .article-entry h3>a"
 ).forEach((element) => {
   if (window.REIMU_CONFIG.icon_font) {
     // iconfont
