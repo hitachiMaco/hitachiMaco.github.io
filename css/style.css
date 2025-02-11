@@ -609,7 +609,6 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150%;
   z-index: -2;
   user-select: none;
   display: block;
@@ -1573,6 +1572,20 @@ a {
   #page-nav .space {
     display: none;
   }
+}
+.github-calendar {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  margin-top: -20px;
+  margin-left: -15px;
+}
+.github-calendar-img {
+  object-fit: cover;
+  clip-path: inset(0 0 20% 0); /* 上80%显示，底部裁剪20% */
+  height: 80%;
+  margin-top: -20px;
 }
 .tag-wrap,
 .category-wrap {

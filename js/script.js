@@ -80,13 +80,15 @@
     const id = this.id;
     if (id == "nav-sun-btn") {
       window.localStorage.setItem("dark_mode", "false");
-      document.body.dispatchEvent(new CustomEvent("light-theme-set"));
       document.documentElement.removeAttribute("data-theme");
+      document.body.dispatchEvent(new CustomEvent("light-theme-set"));
+
       this.id = "nav-moon-btn";
     } else {
       window.localStorage.setItem("dark_mode", "true");
-      document.body.dispatchEvent(new CustomEvent("dark-theme-set"));
       document.documentElement.setAttribute("data-theme", "dark");
+      document.body.dispatchEvent(new CustomEvent("dark-theme-set"));
+
       this.id = "nav-sun-btn";
     }
   });
