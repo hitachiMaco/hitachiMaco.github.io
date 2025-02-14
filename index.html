@@ -1,4 +1,11 @@
 
+  
+<script src="/js/prevent_scroll.js"></script>
+
+
+
+
+
   <!DOCTYPE html>
   <html lang="zh-CN"  >
   <head>
@@ -119,7 +126,7 @@
 
     <div id="container">
       <div id="wrap">
-        <div id="header-nav">
+        <div id="header-nav" class="boss">
   <nav id="main-nav">
     
             
@@ -174,6 +181,7 @@
               </span>
               
                 
+
                   <a id="main-nav-toggle" class="nav-icon"></a>
   </nav>
   <nav id="sub-nav">
@@ -183,8 +191,28 @@
       
         
             
+              <script>
+                document.body.addEventListener('hideElements', () => {
+                      const elements = document.querySelectorAll(".nav-icon");
+                      elements.forEach(element => {
+                        element.style.transition = 'all 1s'; // 设置平滑过渡
+                        element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+                        element.style.opacity = '0'; // 设置透明度为0
+                      });
+                    });
+                </script>
   </nav>
 </div>
+<script>
+  document.body.addEventListener('hideElements', () => {
+        const elements = document.querySelectorAll(".boss");
+        elements.forEach(element => {
+          element.style.filter = 'blur(5px)';  // 设置模糊效果，调整 px 以控制模糊程度
+          element.style.pointerEvents = 'none';  // 禁止所有鼠标事件
+          element.style.opacity = '0';  // 设置透明度以增加禁用效果的可见性
+        });
+      });
+  </script>
 <header id="header">
   
           <picture>
@@ -288,10 +316,14 @@
 
             </script>
             
+            
                   
                     <div id="header-outer">
-                      <div id="header-title">
+                      
+                      <div id="header-title" class="class-title">
                         
+                        
+                            
                             
                               
                                 <a href="/" id="logo">
@@ -313,27 +345,88 @@
                                           </h2>
                                           
                       </div>
-                    </div>
+                      <script>
+                        document.body.addEventListener('hideElements', () => {
+                          // 禁用 sidebar-wrapper 和 aplayer
+                          const sidebarElements = document.querySelectorAll('.class-title');
+                          sidebarElements.forEach(element => {
+                            element.style.transition = 'all 1s'; // 设置平滑过渡
+                            element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+                            element.style.opacity = '0'; // 设置透明度为0
+                          });
+                        })
+                      </script>
+</div>
 </header>
-        <div id="content" class="sidebar-left"  >
+
+
+          <div id="rollbar">
+            <!-- 主页滚动容器 -->
+
+<script src="/js/scroll.js"></script>
+
+<div class="scroll-container">
+    <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      
+      
+        <div class="image-item" data-index="0">
+          <img 
+            src="/assets/images/dairy/2025-02-11.jpg" 
+            class="image-cover" 
+            draggable="false"
+          />
+          <div class="image-back"></div>
+          <div class="title">
+            2.11
+          </div>
+        </div>
+      
+        <div class="image-item" data-index="1">
+          <img 
+            src="/assets/images/dairy/2025-02-12.jpg" 
+            class="image-cover" 
+            draggable="false"
+          />
+          <div class="image-back"></div>
+          <div class="title">
+            2.12
+          </div>
+        </div>
+      
+        <div class="image-item" data-index="2">
+          <img 
+            src="/assets/images/2025-02-08.jpg" 
+            class="image-cover" 
+            draggable="false"
+          />
+          <div class="image-back"></div>
+          <div class="title">
+            python中的.__XX__
+          </div>
+        </div>
+      
+        <div class="image-item" data-index="3">
+          <img 
+            src="/assets/images/2025-02-07.jpg" 
+            class="image-cover" 
+            draggable="false"
+          />
+          <div class="image-back"></div>
+          <div class="title">
+            hello blog!
+          </div>
+        </div>
+      
+      
+    </div>
+  </div>
+
+
+          </div>
+
+        <div id="content" class="sidebar-left"   style="margin-top:20px">
           <aside id="sidebar">
   
-  
-    <meting-js
-      theme="var(--color-link)"
-      id="13282817727"
-      server="netease"
-      type="playlist"
-      
-      
-      
-      
-      order="random"
-      
-      volume="0.2"
-      
-      list-folded="true"
-    ></meting-js>
   
   <div class="sidebar-wrapper ">
     <div class="sidebar-wrap" data-aos="fade-up">
@@ -346,7 +439,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">2</div>
+    <div class="sidebar-state-number">4</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
@@ -410,6 +503,25 @@
       
     </div>
   </div>
+  <script>
+    document.body.addEventListener('hideElements', () => {
+      // 禁用 sidebar-wrapper 和 aplayer
+      const sidebarElements = document.querySelectorAll('.sidebar-wrapper');
+      sidebarElements.forEach(element => {
+        element.style.transition = 'all 1s'; // 设置平滑过渡
+        element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+        element.style.opacity = '0'; // 设置透明度为0
+      });
+      
+      // 如果 aplayer 存在，禁用并设置透明度为 0
+      const aplayer = document.querySelector('#aplayer');
+      if (aplayer) {
+        aplayer.style.transition = 'all 1s'; // 设置过渡效果
+        aplayer.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+        aplayer.style.opacity = '0'; // 设置透明度为0
+      }
+    });
+  </script>
 
   <div class="sidebar-widget">
   
@@ -418,7 +530,100 @@
 
           <section id="main">
   
-      
+
+                          <!-- 这里是主页下方矩形块 -->
+        <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+          
+              <a class="post-link" href="/2025/02/12/2-11/" aria-label="2.11"></a>
+              
+                
+                    <div class="post-cover-left">
+                          
+                            <img data-src="/assets/images/dairy/2025-02-11.jpg" data-sizes="auto"
+                              alt="2.11" class="lazyload">
+                            
+                    </div>
+                    <div class="post-info">
+                      <div class="post-meta">
+                        <span><span class="icon-calendar"></span>2025-02-12</span>
+                        <span><span class="icon-pencil"></span>
+                          0 字
+                        </span>
+                        <span><span class="icon-clock"></span>
+                          1 分钟
+                        </span>
+                      </div>
+                      <h2 class="post-title">
+                        2.11
+                      </h2>
+                      <article class="post-article">
+                        
+                              
+                                
+                      </article>
+                    </div>
+  </div>
+</div>
+<script>
+  document.body.addEventListener('hideElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+      element.style.opacity = '0'; // 设置透明度为0
+    });
+  })
+</script>
+
+                              <!-- 这里是主页下方矩形块 -->
+        <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+          
+              <a class="post-link" href="/2025/02/12/2-12/" aria-label="2.12"></a>
+              
+                
+                    <div class="post-cover-right">
+                          
+                            <img data-src="/assets/images/dairy/2025-02-12.jpg" data-sizes="auto"
+                              alt="2.12" class="lazyload">
+                            
+                    </div>
+                    <div class="post-info">
+                      <div class="post-meta">
+                        <span><span class="icon-calendar"></span>2025-02-12</span>
+                        <span><span class="icon-pencil"></span>
+                          0 字
+                        </span>
+                        <span><span class="icon-clock"></span>
+                          1 分钟
+                        </span>
+                      </div>
+                      <h2 class="post-title">
+                        2.12
+                      </h2>
+                      <article class="post-article">
+                        
+                              
+                                
+                      </article>
+                    </div>
+  </div>
+</div>
+<script>
+  document.body.addEventListener('hideElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+      element.style.opacity = '0'; // 设置透明度为0
+    });
+  })
+</script>
+
+                              <!-- 这里是主页下方矩形块 -->
         <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
           
@@ -459,7 +664,19 @@ Python中对于一个类来说，有着非常多的魔法方法（以__XX__方�
                     </div>
   </div>
 </div>
-          
+<script>
+  document.body.addEventListener('hideElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+      element.style.opacity = '0'; // 设置透明度为0
+    });
+  })
+</script>
+
+                              <!-- 这里是主页下方矩形块 -->
         <div class="post-wrapper">
   <div class="post-wrap-right" data-aos="fade-up">
           
@@ -495,12 +712,40 @@ Python中对于一个类来说，有着非常多的魔法方法（以__XX__方�
                     </div>
   </div>
 </div>
+<script>
+  document.body.addEventListener('hideElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+      element.style.opacity = '0'; // 设置透明度为0
+    });
+  })
+</script>
+
           
             
                 
 </section>
         </div>
         
+        
+          <meting-js
+            theme="var(--color-link)"
+            id="13282817727"
+            server="netease"
+            type="playlist"
+            
+            fixed="true"
+            
+            
+            order="random"
+            
+            volume="0.2"
+            
+            list-folded="true"
+          ></meting-js>
         
         <footer id="footer">
   <div style="width: 100%; overflow: hidden">
@@ -528,7 +773,7 @@ Python中对于一个类来说，有着非常多的魔法方法（以__XX__方�
                   3.8k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
-                    00:17
+                    00:19
                 </div>
                 
                   
@@ -567,7 +812,7 @@ Python中对于一个类来说，有着非常多的魔法方法（以__XX__方�
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">2</div>
+    <div class="sidebar-state-number">4</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
@@ -841,6 +1086,7 @@ Python中对于一个类来说，有着非常多的魔法方法（以__XX__方�
 <script src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js" integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8+0maanw1S&#x2F;IyB+Y4JG+ZDU7GpKE8" crossorigin="anonymous"></script>
 
   
+
 
   </body>
   </html>

@@ -1,4 +1,11 @@
 
+  
+<script src="/js/prevent_scroll.js"></script>
+
+
+
+
+
   <!DOCTYPE html>
 <html lang="zh-CN"  >
 <head>
@@ -72,7 +79,7 @@
 <body>
   <div id="container">
     <div id="wrap">
-      <div id="header-nav">
+      <div id="header-nav" class="boss">
   <nav id="main-nav">
     
             
@@ -127,6 +134,7 @@
               </span>
               
                 
+
                   <a id="main-nav-toggle" class="nav-icon"></a>
   </nav>
   <nav id="sub-nav">
@@ -136,8 +144,28 @@
       
         
             
+              <script>
+                document.body.addEventListener('hideElements', () => {
+                      const elements = document.querySelectorAll(".nav-icon");
+                      elements.forEach(element => {
+                        element.style.transition = 'all 1s'; // 设置平滑过渡
+                        element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+                        element.style.opacity = '0'; // 设置透明度为0
+                      });
+                    });
+                </script>
   </nav>
 </div>
+<script>
+  document.body.addEventListener('hideElements', () => {
+        const elements = document.querySelectorAll(".boss");
+        elements.forEach(element => {
+          element.style.filter = 'blur(5px)';  // 设置模糊效果，调整 px 以控制模糊程度
+          element.style.pointerEvents = 'none';  // 禁止所有鼠标事件
+          element.style.opacity = '0';  // 设置透明度以增加禁用效果的可见性
+        });
+      });
+  </script>
 <header id="header">
   
           <picture>
@@ -241,9 +269,12 @@
 
             </script>
             
+            
                   
                     <div id="header-outer">
-                      <div id="header-title">
+                      
+                      <div id="header-title" class="class-title">
+                        
                         
                           <a href="/" id="logo">
                             <h1 data-aos="slide-up">
@@ -259,8 +290,20 @@
                                       </h2>
                                       
                       </div>
-                    </div>
+                      <script>
+                        document.body.addEventListener('hideElements', () => {
+                          // 禁用 sidebar-wrapper 和 aplayer
+                          const sidebarElements = document.querySelectorAll('.class-title');
+                          sidebarElements.forEach(element => {
+                            element.style.transition = 'all 1s'; // 设置平滑过渡
+                            element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+                            element.style.opacity = '0'; // 设置透明度为0
+                          });
+                        })
+                      </script>
+</div>
 </header>
+
     </div>
   </div>
   

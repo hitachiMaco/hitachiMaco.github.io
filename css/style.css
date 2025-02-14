@@ -1027,6 +1027,7 @@ a {
   padding-top: 56.25%;
   height: 0;
   overflow: hidden;
+  color: #c54142;
 }
 .article-entry .video-container iframe,
 .article-entry .video-container object,
@@ -2215,6 +2216,72 @@ pre .javascript .function {
 .post-link-card-excerpt .icon-link {
   font-size: 12px;
   margin-right: 5px;
+}
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 2rem 0;
+  perspective: 1000px; /* 保留3D效果 */
+  overflow: visible;
+}
+.image-track {
+  display: flex;
+  gap: 1vmin; /* 控制重叠程度 */
+  padding: 0 10vw; /* 两侧留白 */
+}
+.image-item {
+  position: relative;
+  flex: 0 0 20vmin; /* 宽度基准 */
+  aspect-ratio: 1/2; /* 1:2比例 */
+  transition: transform 1s ease, width 1s ease, left 1s ease; /* 加入宽度和左移的过渡 */
+  transform-style: preserve-3d; /* 保持3D效果 */
+  cursor: pointer;
+  left: 0; /* 初始位置 */
+  perspective: 1000px; /* 视角深度 */
+  z-index: 15000;
+}
+.image-cover,
+.image-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1vmin;
+  backface-visibility: hidden; /* 隐藏背面 */
+  z-index: 15000;
+}
+.image-back {
+  background-color: #1e90ff;
+  color: #fff;
+  transform: rotateY(180deg);
+  z-index: 15000;
+}
+.title {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 2vmin;
+  text-shadow: 2px 2px 4px rgba(15,10,10,0.5);
+  white-space: nowrap;
+}
+.image-item:hover {
+  z-index: 10;
+  transform: scale(1.1) translateX(0) rotateY(180deg); /* 放大但不改变位置 */
+}
+.image-item:hover ~ .image-item {
+  transform: translateX(5%); /* 向右挤 */
+}
+.image-item:hover ~ .image-item:before {
+  transform: translateX(-5%); /* 向左挤 */
+}
+.image-item.disabled {
+  pointer-events: none; /* 禁用点击事件 */
+}
+.image-item.disabled:hover {
+  transform: none; /* 禁用 hover 效果 */
+  z-index: 0; /* 确保被禁用的项不在顶部 */
 }
 .sidebar-top {
   position: fixed;
