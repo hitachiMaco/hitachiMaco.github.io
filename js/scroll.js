@@ -58,6 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
       // 禁用点击和 hover 事件
       item.classList.add('disabled');
       
+      // 禁用页面滚动，并固定页面位置
+      const scrollY =  document.documentElement.scrollTop || document.body.scrollTop;
+      const currentLeft = item.getBoundingClientRect().left; // 获取元素当前离屏幕左侧的距离
+      const targetTop = (window.innerHeight - item.offsetHeight) / 2 + scrollY;
+      const targetLeft = 200; // 目标位置是离屏幕左侧 200px
+      // 计算需要移动的距离
+      const moveX = targetLeft - currentLeft;
+      // 计算需要垂直移动的距离
+      const moveY = targetTop - item.getBoundingClientRect().top - scrollY; // 减去当前的滚动位置
+      if(!flipped){
+
       // 禁用其他所有的 image-item 除了当前点击的
       document.querySelectorAll('.image-item').forEach(otherItem => {
         if (otherItem !== item) {
@@ -66,22 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
           otherItem.style.opacity = '0'; // 设置透明度为0
         }
       });
-      if(!flipped){
-        // 禁用页面滚动，并固定页面位置
-        const scrollY =  document.documentElement.scrollTop || document.body.scrollTop;
-        const currentLeft = item.getBoundingClientRect().left; // 获取元素当前离屏幕左侧的距离
-        const targetTop = (window.innerHeight - item.offsetHeight) / 2 + scrollY;
-        const targetLeft = 200; // 目标位置是离屏幕左侧 200px
 
         const event = new CustomEvent("hideElements");
-  
         // 触发事件，通知其他元素
         document.body.dispatchEvent(event);
-
-        // 计算需要移动的距离
-        const moveX = targetLeft - currentLeft;
-        // 计算需要垂直移动的距离
-        const moveY = targetTop - item.getBoundingClientRect().top - scrollY; // 减去当前的滚动位置
 
         console.log(scrollY,moveX,moveY)
 
@@ -101,10 +100,52 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           item.classList.remove('disabled');  // 重新启用点击和 hover
           isProcessing = false;  // 允许再次点击
-        }, 2000);  // 第二阶段动画时间
+        }, 797);  // 第二阶段动画时间
       }, 797);  // 第一阶段动画完成后的延时（确保时间一致，动画无空隙）
         flipped = true; // 更新状态为已变换
-      }
+
+
+      }  else {
+          // 第一阶段：恢复一半平移，缩放，旋转
+          item.style.transition = 'transform 0.8s linear';  // 使用线性过渡
+          item.style.transform = `translateX(${-moveX / 2}px) translateY(${-moveY / 2}px) rotateY(180deg) scaleX(1.5) scaleY(1.5)`; // 恢复一半
+        
+          setTimeout(() => {
+            // 第二阶段：恢复完全的平移，缩放，旋转
+            item.style.transition = 'transform 0.8s linear';  // 保持线性过渡，确保两个动画连贯
+            item.style.transform = `translateX(0px) translateY(0px) rotateY(0deg) scaleX(1) scaleY(1)`; // 恢复到初始位置和状态
+        
+            setTimeout(() => {
+              // 恢复其他所有的 image-item 状态
+              document.querySelectorAll('.image-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                  otherItem.style.transition = 'all 1s'; // 设置平滑过渡
+                  otherItem.style.pointerEvents = 'auto'; // 启用所有鼠标事件
+                  otherItem.style.opacity = '1'; // 恢复透明度为1
+                }
+                setTimeout(() => {
+                otherItem.style.transition = 'transform 0.3s ease'; 
+                },500)
+              });
+              item.classList.remove('disabled');  // 重新启用点击和 hover
+        
+              // 恢复页面的滚动状态
+              document.body.style.position = '';  // 解除固定定位
+              document.body.style.top = '';  // 恢复滚动位置
+              document.body.style.width = '';  // 恢复原来的宽度
+        
+              // 触发事件，通知其他元素
+              const event = new CustomEvent("showElements");
+              document.body.dispatchEvent(event);
+        
+              setTimeout(() => {
+                isProcessing = false;  // 允许再次点击
+                flipped = false; // 更新状态为未变换
+              }, 990);  // 动画完成后解除禁用状态
+            }, 797);  // 第一阶段动画完成后的延时（确保时间一致，动画无空隙）
+          }, 797);  // 第一阶段动画完成后的延时（确保时间一致，动画无空隙）
+        }
+        
     });
   });
 });

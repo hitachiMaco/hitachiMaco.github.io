@@ -2233,12 +2233,12 @@ pre .javascript .function {
   position: relative;
   flex: 0 0 20vmin; /* 宽度基准 */
   aspect-ratio: 1/2; /* 1:2比例 */
-  transition: transform 1s ease, width 1s ease, left 1s ease; /* 加入宽度和左移的过渡 */
+  transition: transform 0.3s ease; /* 加入宽度和左移的过渡 */
   transform-style: preserve-3d; /* 保持3D效果 */
   cursor: pointer;
   left: 0; /* 初始位置 */
   perspective: 1000px; /* 视角深度 */
-  z-index: 15000;
+  z-index: 1000;
 }
 .image-cover,
 .image-back {
@@ -2248,13 +2248,13 @@ pre .javascript .function {
   object-fit: cover;
   border-radius: 1vmin;
   backface-visibility: hidden; /* 隐藏背面 */
-  z-index: 15000;
+  z-index: 1000;
 }
 .image-back {
   background-color: #1e90ff;
   color: #fff;
   transform: rotateY(180deg);
-  z-index: 15000;
+  z-index: 1000;
 }
 .title {
   position: absolute;
@@ -2269,6 +2269,7 @@ pre .javascript .function {
 .image-item:hover {
   z-index: 10;
   transform: scale(1.1) translateX(0) rotateY(180deg); /* 放大但不改变位置 */
+  z-index: 1001;
 }
 .image-item:hover ~ .image-item {
   transform: translateX(5%); /* 向右挤 */

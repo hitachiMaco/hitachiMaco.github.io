@@ -200,6 +200,14 @@
                         element.style.opacity = '0'; // 设置透明度为0
                       });
                     });
+                document.body.addEventListener('showElements', () => {
+                  const elements = document.querySelectorAll(".nav-icon");
+                  elements.forEach(element => {
+                    element.style.transition = 'all 1s'; // 设置平滑过渡
+                    element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+                    element.style.opacity = '1'; // 设置透明度为0
+                  });
+                });
                 </script>
   </nav>
 </div>
@@ -207,11 +215,19 @@
   document.body.addEventListener('hideElements', () => {
         const elements = document.querySelectorAll(".boss");
         elements.forEach(element => {
-          element.style.filter = 'blur(5px)';  // 设置模糊效果，调整 px 以控制模糊程度
+          element.style.transition = 'all 1s'; // 设置平滑过渡
           element.style.pointerEvents = 'none';  // 禁止所有鼠标事件
           element.style.opacity = '0';  // 设置透明度以增加禁用效果的可见性
         });
       });
+  document.body.addEventListener('showElements', () => {
+    const elements = document.querySelectorAll(".boss");
+    elements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'auto';  // 禁止所有鼠标事件
+      element.style.opacity = '1';  // 设置透明度以增加禁用效果的可见性
+    });
+  });
   </script>
 <header id="header">
   
@@ -353,6 +369,15 @@
                             element.style.transition = 'all 1s'; // 设置平滑过渡
                             element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
                             element.style.opacity = '0'; // 设置透明度为0
+                          });
+                        })
+                        document.body.addEventListener('showElements', () => {
+                          // 禁用 sidebar-wrapper 和 aplayer
+                          const sidebarElements = document.querySelectorAll('.class-title');
+                          sidebarElements.forEach(element => {
+                            element.style.transition = 'all 1s'; // 设置平滑过渡
+                            element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+                            element.style.opacity = '1'; // 设置透明度为0
                           });
                         })
                       </script>
@@ -521,6 +546,21 @@
         aplayer.style.opacity = '0'; // 设置透明度为0
       }
     });
+    document.body.addEventListener('showElements', () => {
+      const sidebarElements = document.querySelectorAll('.sidebar-wrapper');
+      sidebarElements.forEach(element => {
+        element.style.transition = 'all 1s'; // 设置平滑过渡
+        element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+        element.style.opacity = '1'; // 设置透明度为0
+      });
+      
+      const aplayer = document.querySelector('#aplayer');
+      if (aplayer) {
+        aplayer.style.transition = 'all 1s'; // 设置过渡效果
+        aplayer.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+        aplayer.style.opacity = '1'; // 设置透明度为0
+      }
+    });
   </script>
 
   <div class="sidebar-widget">
@@ -575,6 +615,15 @@
       element.style.opacity = '0'; // 设置透明度为0
     });
   })
+  document.body.addEventListener('showElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+      element.style.opacity = '1'; // 设置透明度为0
+    });
+  })
 </script>
 
                               <!-- 这里是主页下方矩形块 -->
@@ -619,6 +668,15 @@
       element.style.transition = 'all 1s'; // 设置平滑过渡
       element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
       element.style.opacity = '0'; // 设置透明度为0
+    });
+  })
+  document.body.addEventListener('showElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+      element.style.opacity = '1'; // 设置透明度为0
     });
   })
 </script>
@@ -674,6 +732,15 @@ Python中对于一个类来说，有着非常多的魔法方法（以__XX__方�
       element.style.opacity = '0'; // 设置透明度为0
     });
   })
+  document.body.addEventListener('showElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+      element.style.opacity = '1'; // 设置透明度为0
+    });
+  })
 </script>
 
                               <!-- 这里是主页下方矩形块 -->
@@ -720,6 +787,15 @@ Python中对于一个类来说，有着非常多的魔法方法（以__XX__方�
       element.style.transition = 'all 1s'; // 设置平滑过渡
       element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
       element.style.opacity = '0'; // 设置透明度为0
+    });
+  })
+  document.body.addEventListener('showElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+      element.style.opacity = '1'; // 设置透明度为0
     });
   })
 </script>
