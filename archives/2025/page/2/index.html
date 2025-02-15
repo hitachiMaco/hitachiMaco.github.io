@@ -1,0 +1,1009 @@
+
+  
+<script src="/js/prevent_scroll.js"></script>
+
+
+
+
+
+  <!DOCTYPE html>
+  <html lang="zh-CN"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":30};</script>
+  
+  <title>
+    归档: 2025 |
+    
+    Harry
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_bq08450reo.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+  
+  
+    <meta name="description" content="技术分享">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Harry">
+<meta property="og:url" content="https://hitachimaco.github.io/archives/2025/page/2/index.html">
+<meta property="og:site_name" content="Harry">
+<meta property="og:description" content="技术分享">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hitachimaco.github.io/images/banner.webp">
+<meta property="article:author" content="hitachiMaco">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hitachimaco.github.io/images/banner.webp">
+  
+  
+    <link rel="alternate" href="/atom.xml" title="Harry" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.css">
+
+  
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+        
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav" class="boss">
+  <nav id="main-nav">
+    
+            
+              <span class="main-nav-link-wrap">
+                <div
+                  class="main-nav-icon icon rotate">
+                  &#xe62b;
+                </div>
+                <a class="main-nav-link" href="/">
+                  首页
+                </a>
+              </span>
+              
+              <span class="main-nav-link-wrap">
+                <div
+                  class="main-nav-icon icon rotate">
+                  &#xe62b;
+                </div>
+                <a class="main-nav-link" href="/archives">
+                  归档
+                </a>
+              </span>
+              
+              <span class="main-nav-link-wrap">
+                <div
+                  class="main-nav-icon icon rotate">
+                  &#xe62b;
+                </div>
+                <a class="main-nav-link" href="/calendar">
+                  日历
+                </a>
+              </span>
+              
+              <span class="main-nav-link-wrap">
+                <div
+                  class="main-nav-icon icon rotate">
+                  &#xe62b;
+                </div>
+                <a class="main-nav-link" href="/about">
+                  关于
+                </a>
+              </span>
+              
+              <span class="main-nav-link-wrap">
+                <div
+                  class="main-nav-icon icon rotate">
+                  &#xe62b;
+                </div>
+                <a class="main-nav-link" href="/friend">
+                  友链
+                </a>
+              </span>
+              
+                
+
+                  <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"
+        target="_blank"></a>
+      
+        
+            
+              <script>
+                document.body.addEventListener('hideElements', () => {
+                      const elements = document.querySelectorAll(".nav-icon");
+                      elements.forEach(element => {
+                        element.style.transition = 'all 1s'; // 设置平滑过渡
+                        element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+                        element.style.opacity = '0'; // 设置透明度为0
+                      });
+                    });
+                document.body.addEventListener('showElements', () => {
+                  const elements = document.querySelectorAll(".nav-icon");
+                  elements.forEach(element => {
+                    element.style.transition = 'all 1s'; // 设置平滑过渡
+                    element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+                    element.style.opacity = '1'; // 设置透明度为0
+                  });
+                });
+                </script>
+  </nav>
+</div>
+<script>
+  document.body.addEventListener('hideElements', () => {
+        const elements = document.querySelectorAll(".boss");
+        elements.forEach(element => {
+          element.style.transition = 'all 1s'; // 设置平滑过渡
+          element.style.pointerEvents = 'none';  // 禁止所有鼠标事件
+          element.style.opacity = '0';  // 设置透明度以增加禁用效果的可见性
+        });
+      });
+  document.body.addEventListener('showElements', () => {
+    const elements = document.querySelectorAll(".boss");
+    elements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'auto';  // 禁止所有鼠标事件
+      element.style.opacity = '1';  // 设置透明度以增加禁用效果的可见性
+    });
+  });
+  </script>
+<header id="header">
+  
+          <picture>
+            
+          </picture>
+
+          
+            <img fetchpriority="high" id="random-banner" alt="Harry" style="display: none;">
+
+            <script>
+              (function () {
+                function initBanner() {
+                  const banner = document.getElementById('random-banner');
+                  if (!banner) return;  // **如果当前页面没有 banner，直接 return**
+
+                  const cacheKey = 'hexo_banner_cache';
+                  const imagePool = ["assets/bg/100_light_0_63.webp","assets/bg/101_light_0_74.webp","assets/bg/102_light_0_57.webp","assets/bg/103_light_0_51.webp","assets/bg/104_dark_0_41.webp","assets/bg/105_light_0_57.webp","assets/bg/106_light_0_87.webp","assets/bg/107_light_0_54.webp","assets/bg/108_light_0_63.webp","assets/bg/109_light_0_66.webp","assets/bg/10_light_0_74.webp","assets/bg/110_light_0_71.webp","assets/bg/111_dark_0_36.webp","assets/bg/112_light_0_85.webp","assets/bg/113_light_0_71.webp","assets/bg/114_dark_0_39.webp","assets/bg/115_dark_0_44.webp","assets/bg/116_light_0_64.webp","assets/bg/117_light_0_66.webp","assets/bg/118_light_0_59.webp","assets/bg/119_dark_0_35.webp","assets/bg/11_light_0_72.webp","assets/bg/120_light_0_68.webp","assets/bg/121_light_0_60.webp","assets/bg/122_dark_0_33.webp","assets/bg/123_dark_0_28.webp","assets/bg/124_light_0_65.webp","assets/bg/125_light_0_61.webp","assets/bg/126_light_0_51.webp","assets/bg/127_light_0_64.webp","assets/bg/128_light_0_64.webp","assets/bg/129_dark_0_30.webp","assets/bg/12_light_0_67.webp","assets/bg/130_light_0_55.webp","assets/bg/131_light_0_63.webp","assets/bg/132_dark_0_42.webp","assets/bg/133_light_0_77.webp","assets/bg/134_light_0_67.webp","assets/bg/135_dark_0_41.webp","assets/bg/136_dark_0_50.webp","assets/bg/137_light_0_68.webp","assets/bg/138_light_0_52.webp","assets/bg/139_dark_0_37.webp","assets/bg/13_light_0_75.webp","assets/bg/140_light_0_79.webp","assets/bg/141_light_0_64.webp","assets/bg/142_light_0_53.webp","assets/bg/143_light_0_76.webp","assets/bg/144_light_0_67.webp","assets/bg/145_light_0_55.webp","assets/bg/146_light_0_53.webp","assets/bg/147_light_0_54.webp","assets/bg/148_dark_0_47.webp","assets/bg/149_light_0_72.webp","assets/bg/14_light_0_60.webp","assets/bg/150_light_0_70.webp","assets/bg/151_dark_0_37.webp","assets/bg/152_dark_0_43.webp","assets/bg/153_light_0_55.webp","assets/bg/154_light_0_55.webp","assets/bg/155_dark_0_43.webp","assets/bg/156_light_0_55.webp","assets/bg/157_light_0_69.webp","assets/bg/158_light_0_80.webp","assets/bg/159_light_0_86.webp","assets/bg/15_light_0_66.webp","assets/bg/160_dark_0_48.webp","assets/bg/161_light_0_76.webp","assets/bg/162_light_0_66.webp","assets/bg/163_dark_0_41.webp","assets/bg/164_light_0_59.webp","assets/bg/165_light_0_72.webp","assets/bg/166_light_0_85.webp","assets/bg/167_dark_0_43.webp","assets/bg/168_dark_0_33.webp","assets/bg/169_light_0_81.webp","assets/bg/16_light_0_69.webp","assets/bg/170_dark_0_40.webp","assets/bg/171_light_0_70.webp","assets/bg/172_light_0_76.webp","assets/bg/173_light_0_59.webp","assets/bg/174_dark_0_38.webp","assets/bg/175_light_0_56.webp","assets/bg/176_dark_0_31.webp","assets/bg/177_light_0_60.webp","assets/bg/178_light_0_63.webp","assets/bg/179_light_0_85.webp","assets/bg/17_dark_0_48.webp","assets/bg/180_light_0_60.jpg","assets/bg/181_dark_0_50.webp","assets/bg/182_light_0_77.webp","assets/bg/183_dark_0_37.webp","assets/bg/184_light_0_81.webp","assets/bg/185_light_0_62.webp","assets/bg/186_light_0_82.webp","assets/bg/187_light_0_83.webp","assets/bg/188_light_0_82.webp","assets/bg/189_light_0_67.webp","assets/bg/18_dark_0_47.webp","assets/bg/190_light_0_76.webp","assets/bg/191_light_0_87.webp","assets/bg/192_light_0_87.webp","assets/bg/193_light_0_54.webp","assets/bg/194_light_0_71.webp","assets/bg/195_light_0_69.webp","assets/bg/196_light_0_58.webp","assets/bg/197_light_0_86.webp","assets/bg/198_light_0_70.webp","assets/bg/199_light_0_58.webp","assets/bg/19_light_0_71.webp","assets/bg/1_dark_0_47.webp","assets/bg/200_light_0_87.webp","assets/bg/201_light_0_55.webp","assets/bg/202_dark_0_31.webp","assets/bg/203_light_0_52.webp","assets/bg/204_dark_0_50.webp","assets/bg/205_light_0_68.webp","assets/bg/206_dark_0_32.webp","assets/bg/207_light_0_78.webp","assets/bg/208_light_0_74.webp","assets/bg/209_light_0_54.webp","assets/bg/20_dark_0_48.webp","assets/bg/210_light_0_75.webp","assets/bg/211_light_0_58.webp","assets/bg/212_light_0_70.webp","assets/bg/213_dark_0_29.webp","assets/bg/214_light_0_77.webp","assets/bg/215_light_0_64.webp","assets/bg/216_light_0_74.webp","assets/bg/217_light_0_64.webp","assets/bg/218_dark_0_41.webp","assets/bg/219_light_0_78.webp","assets/bg/21_light_0_68.webp","assets/bg/220_dark_0_49.webp","assets/bg/221_light_0_56.webp","assets/bg/222_light_0_60.webp","assets/bg/223_light_0_75.webp","assets/bg/224_light_0_51.webp","assets/bg/225_dark_0_44.webp","assets/bg/226_dark_0_44.webp","assets/bg/227_dark_0_44.webp","assets/bg/228_light_0_52.webp","assets/bg/229_dark_0_29.webp","assets/bg/22_dark_0_42.webp","assets/bg/230_light_0_87.webp","assets/bg/231_light_0_83.webp","assets/bg/232_light_0_53.webp","assets/bg/233_light_0_73.webp","assets/bg/234_light_0_92.webp","assets/bg/235_light_0_60.webp","assets/bg/236_dark_0_47.webp","assets/bg/237_light_0_52.webp","assets/bg/238_light_0_56.webp","assets/bg/239_light_0_89.webp","assets/bg/23_dark_0_47.webp","assets/bg/240_light_0_59.webp","assets/bg/241_light_0_63.webp","assets/bg/242_light_0_78.webp","assets/bg/243_light_0_71.webp","assets/bg/244_light_0_82.webp","assets/bg/245_light_0_70.webp","assets/bg/246_light_0_65.webp","assets/bg/247_light_0_91.webp","assets/bg/248_light_0_73.webp","assets/bg/249_light_0_83.webp","assets/bg/24_dark_0_44.webp","assets/bg/250_dark_0_41.webp","assets/bg/251_light_0_66.webp","assets/bg/252_light_0_75.webp","assets/bg/253_dark_0_32.webp","assets/bg/254_light_0_51.webp","assets/bg/255_light_0_58.webp","assets/bg/256_dark_0_39.webp","assets/bg/257_dark_0_29.webp","assets/bg/258_light_0_74.webp","assets/bg/259_light_0_75.webp","assets/bg/25_light_0_51.webp","assets/bg/260_light_0_70.webp","assets/bg/261_light_0_60.webp","assets/bg/262_light_0_55.webp","assets/bg/263_light_0_74.webp","assets/bg/264_light_0_57.webp","assets/bg/265_light_0_78.webp","assets/bg/266_light_0_82.webp","assets/bg/267_light_0_79.webp","assets/bg/268_light_0_76.webp","assets/bg/269_light_0_62.webp","assets/bg/26_light_0_54.webp","assets/bg/270_light_0_57.webp","assets/bg/271_light_0_59.webp","assets/bg/272_light_0_60.webp","assets/bg/273_light_0_55.webp","assets/bg/274_light_0_71.webp","assets/bg/275_light_0_84.webp","assets/bg/276_light_0_69.webp","assets/bg/277_dark_0_43.webp","assets/bg/278_light_0_65.webp","assets/bg/279_light_0_85.webp","assets/bg/27_dark_0_44.webp","assets/bg/280_light_0_51.webp","assets/bg/281_light_0_69.webp","assets/bg/282_dark_0_49.webp","assets/bg/283_light_0_75.webp","assets/bg/284_light_0_76.webp","assets/bg/285_dark_0_43.webp","assets/bg/286_light_0_86.webp","assets/bg/287_light_0_77.webp","assets/bg/288_light_0_64.webp","assets/bg/289_light_0_77.webp","assets/bg/28_light_0_64.webp","assets/bg/290_light_0_82.webp","assets/bg/291_light_0_72.webp","assets/bg/292_light_0_90.webp","assets/bg/293_light_0_64.webp","assets/bg/294_dark_0_41.webp","assets/bg/295_dark_0_34.webp","assets/bg/296_light_0_74.webp","assets/bg/297_light_0_76.webp","assets/bg/298_light_0_69.webp","assets/bg/299_light_0_65.webp","assets/bg/29_dark_0_42.webp","assets/bg/2_light_0_58.webp","assets/bg/300_light_0_72.webp","assets/bg/301_light_0_70.webp","assets/bg/302_light_0_73.webp","assets/bg/303_light_0_59.webp","assets/bg/304_light_0_94.webp","assets/bg/305_light_0_80.webp","assets/bg/306_light_0_78.webp","assets/bg/307_light_0_79.webp","assets/bg/308_dark_0_41.webp","assets/bg/309_light_0_52.webp","assets/bg/30_light_0_57.webp","assets/bg/310_dark_0_45.webp","assets/bg/311_light_0_73.webp","assets/bg/312_dark_0_32.webp","assets/bg/313_light_0_58.webp","assets/bg/314_light_0_69.webp","assets/bg/315_dark_0_49.webp","assets/bg/316_dark_0_42.webp","assets/bg/317_light_0_57.webp","assets/bg/318_light_0_61.webp","assets/bg/319_dark_0_44.webp","assets/bg/31_light_0_60.webp","assets/bg/320_dark_0_43.webp","assets/bg/321_light_0_64.webp","assets/bg/322_light_0_78.webp","assets/bg/323_light_0_68.webp","assets/bg/324_light_0_80.webp","assets/bg/325_light_0_66.webp","assets/bg/326_light_0_69.webp","assets/bg/327_light_0_58.webp","assets/bg/328_light_0_75.webp","assets/bg/329_light_0_71.webp","assets/bg/32_dark_0_35.webp","assets/bg/330_light_0_71.webp","assets/bg/331_dark_0_39.webp","assets/bg/332_dark_0_45.jpg","assets/bg/333_light_0_55.webp","assets/bg/334_dark_0_49.webp","assets/bg/335_light_0_75.webp","assets/bg/336_light_0_56.webp","assets/bg/337_dark_0_42.webp","assets/bg/338_dark_0_40.webp","assets/bg/339_light_0_65.webp","assets/bg/33_light_0_66.webp","assets/bg/340_light_0_70.webp","assets/bg/341_light_0_61.webp","assets/bg/342_light_0_66.webp","assets/bg/343_dark_0_38.webp","assets/bg/344_light_0_82.webp","assets/bg/345_light_0_56.webp","assets/bg/346_light_0_66.webp","assets/bg/347_light_0_66.webp","assets/bg/348_light_0_69.webp","assets/bg/349_light_0_81.webp","assets/bg/34_light_0_77.webp","assets/bg/350_light_0_86.webp","assets/bg/351_light_0_77.webp","assets/bg/352_dark_0_49.webp","assets/bg/353_dark_0_48.webp","assets/bg/354_light_0_77.webp","assets/bg/355_light_0_59.webp","assets/bg/356_dark_0_34.webp","assets/bg/357_light_0_76.webp","assets/bg/358_light_0_64.webp","assets/bg/359_light_0_73.webp","assets/bg/35_light_0_78.webp","assets/bg/360_light_0_69.webp","assets/bg/361_light_0_57.webp","assets/bg/362_light_0_70.webp","assets/bg/363_dark_0_19.webp","assets/bg/364_light_0_66.webp","assets/bg/365_dark_0_44.webp","assets/bg/366_light_0_52.webp","assets/bg/367_light_0_62.webp","assets/bg/368_dark_0_39.webp","assets/bg/369_light_0_56.webp","assets/bg/36_light_0_78.webp","assets/bg/370_dark_0_49.webp","assets/bg/371_light_0_65.webp","assets/bg/372_light_0_64.webp","assets/bg/373_light_0_80.webp","assets/bg/374_dark_0_30.webp","assets/bg/375_dark_0_36.webp","assets/bg/376_dark_0_37.webp","assets/bg/377_light_0_73.webp","assets/bg/378_dark_0_46.webp","assets/bg/379_dark_0_48.webp","assets/bg/37_dark_0_35.webp","assets/bg/380_dark_0_48.webp","assets/bg/381_dark_0_33.webp","assets/bg/382_dark_0_40.webp","assets/bg/383_light_0_90.webp","assets/bg/384_light_0_90.webp","assets/bg/385_light_0_65.webp","assets/bg/386_light_0_75.webp","assets/bg/387_light_0_53.webp","assets/bg/388_light_0_58.webp","assets/bg/389_dark_0_43.webp","assets/bg/38_light_0_69.webp","assets/bg/390_dark_0_49.webp","assets/bg/391_dark_0_42.jpg","assets/bg/392_light_0_91.webp","assets/bg/393_light_0_54.webp","assets/bg/394_dark_0_45.webp","assets/bg/395_dark_0_48.webp","assets/bg/396_light_0_51.webp","assets/bg/397_light_0_52.webp","assets/bg/398_dark_0_40.webp","assets/bg/399_dark_0_41.webp","assets/bg/39_light_0_82.webp","assets/bg/3_light_0_78.webp","assets/bg/400_dark_0_36.webp","assets/bg/401_light_0_50.webp","assets/bg/402_dark_0_35.webp","assets/bg/403_light_0_74.webp","assets/bg/404_light_0_53.webp","assets/bg/405_dark_0_42.webp","assets/bg/406_light_0_60.webp","assets/bg/407_light_0_63.webp","assets/bg/408_dark_0_27.webp","assets/bg/409_dark_0_31.webp","assets/bg/40_light_0_67.webp","assets/bg/410_dark_0_31.webp","assets/bg/411_light_0_78.webp","assets/bg/412_light_0_68.webp","assets/bg/413_dark_0_25.webp","assets/bg/414_dark_0_36.webp","assets/bg/415_dark_0_34.webp","assets/bg/416_light_0_67.webp","assets/bg/417_light_0_54.webp","assets/bg/418_dark_0_44.webp","assets/bg/419_dark_0_32.webp","assets/bg/41_light_0_71.webp","assets/bg/420_light_0_51.webp","assets/bg/421_dark_0_46.webp","assets/bg/422_dark_0_50.webp","assets/bg/423_light_0_70.webp","assets/bg/424_light_0_51.webp","assets/bg/425_light_0_68.webp","assets/bg/426_dark_0_37.webp","assets/bg/427_dark_0_41.webp","assets/bg/428_light_0_52.webp","assets/bg/429_light_0_69.webp","assets/bg/42_light_0_63.webp","assets/bg/430_dark_0_44.webp","assets/bg/431_light_0_83.webp","assets/bg/432_light_0_74.webp","assets/bg/433_light_0_62.webp","assets/bg/434_light_0_72.webp","assets/bg/435_light_0_75.webp","assets/bg/436_light_0_77.webp","assets/bg/437_light_0_89.webp","assets/bg/438_light_0_66.webp","assets/bg/439_light_0_69.webp","assets/bg/43_light_0_80.webp","assets/bg/440_light_0_92.webp","assets/bg/441_light_0_56.webp","assets/bg/442_light_0_64.webp","assets/bg/443_light_0_69.jpg","assets/bg/444_light_0_56.webp","assets/bg/445_light_0_63.webp","assets/bg/446_light_0_91.webp","assets/bg/447_light_0_57.webp","assets/bg/448_light_0_82.webp","assets/bg/449_light_0_66.webp","assets/bg/44_light_0_54.webp","assets/bg/450_dark_0_46.webp","assets/bg/451_light_0_54.webp","assets/bg/452_light_0_57.webp","assets/bg/453_light_0_71.webp","assets/bg/454_light_0_60.webp","assets/bg/455_light_0_69.webp","assets/bg/456_light_0_58.webp","assets/bg/457_light_0_83.webp","assets/bg/458_light_0_83.webp","assets/bg/459_light_0_63.webp","assets/bg/45_dark_0_29.webp","assets/bg/460_light_0_71.webp","assets/bg/461_light_0_69.webp","assets/bg/462_light_0_77.webp","assets/bg/463_light_0_82.webp","assets/bg/464_light_0_57.webp","assets/bg/465_dark_0_45.webp","assets/bg/466_dark_0_41.webp","assets/bg/467_light_0_52.webp","assets/bg/46_dark_0_34.webp","assets/bg/47_dark_0_35.webp","assets/bg/48_dark_0_31.webp","assets/bg/49_light_0_84.webp","assets/bg/4_light_0_55.webp","assets/bg/50_dark_0_19.webp","assets/bg/51_dark_0_28.webp","assets/bg/52_light_0_78.webp","assets/bg/53_light_0_77.webp","assets/bg/54_light_0_88.webp","assets/bg/55_light_0_75.webp","assets/bg/56_dark_0_37.webp","assets/bg/57_dark_0_28.webp","assets/bg/58_dark_0_47.webp","assets/bg/59_light_0_54.webp","assets/bg/5_light_0_60.webp","assets/bg/60_light_0_70.webp","assets/bg/61_light_0_58.webp","assets/bg/62_light_0_80.webp","assets/bg/63_dark_0_33.webp","assets/bg/64_light_0_73.webp","assets/bg/65_light_0_76.webp","assets/bg/66_light_0_59.webp","assets/bg/67_light_0_62.webp","assets/bg/68_light_0_64.webp","assets/bg/69_dark_0_34.webp","assets/bg/6_light_0_65.webp","assets/bg/70_light_0_58.webp","assets/bg/71_dark_0_29.webp","assets/bg/72_light_0_70.webp","assets/bg/73_light_0_70.webp","assets/bg/74_dark_0_42.webp","assets/bg/75_light_0_55.webp","assets/bg/76_light_0_84.webp","assets/bg/77_dark_0_33.webp","assets/bg/78_dark_0_44.webp","assets/bg/79_light_0_76.webp","assets/bg/7_light_0_63.webp","assets/bg/80_light_0_61.webp","assets/bg/81_dark_0_36.webp","assets/bg/82_dark_0_42.webp","assets/bg/83_light_0_75.webp","assets/bg/84_dark_0_50.webp","assets/bg/85_light_0_51.webp","assets/bg/86_dark_0_43.webp","assets/bg/87_light_0_78.webp","assets/bg/88_light_0_71.webp","assets/bg/89_light_0_63.webp","assets/bg/8_light_0_59.webp","assets/bg/90_light_0_57.webp","assets/bg/91_light_0_67.webp","assets/bg/92_dark_0_48.webp","assets/bg/93_light_0_70.webp","assets/bg/94_light_0_50.webp","assets/bg/95_light_0_69.webp","assets/bg/96_dark_0_49.webp","assets/bg/97_light_0_53.webp","assets/bg/98_light_0_76.webp","assets/bg/99_dark_0_46.webp","assets/bg/9_light_0_73.webp"];
+
+                  function getBannerUrl() {
+                    let url = localStorage.getItem(cacheKey);
+                    if (url && imagePool.includes(url)) {
+                      console.log('使用缓存图片:', url);
+                      return url;
+                    } else {
+                      const imgSrc = imagePool[Math.floor(Math.random() * imagePool.length)];
+                      const baseUrl = "/";
+
+                       // 提取图片名中的色调和亮度
+                      console.log(imgSrc)
+                      const fileName = imgSrc.replace(/^assets\/bg\//, '');
+                      console.log(fileName)
+
+                      const match = fileName.match(/(\d+)_(light|dark)_(\d+_\d{2})\./);
+                      console.log(match)
+                      let color = 'light'; // 默认色调为浅色
+                      let brightness = 0.6; // 默认亮度为0.6
+
+                      if (match) {
+                        console.log("match")
+                        color = match[2] === 'dark' ? 'dark' : 'light'; // 判断深色或浅色
+                        brightness = parseFloat(match[3].replace('_', '.')); // 将亮度值恢复为小数
+                      }
+
+                      // 将色调和亮度存储到 localStorage
+                      localStorage.setItem('themeColor', color);
+                      localStorage.setItem('brightness', brightness);
+
+                      // 输出选择的图片路径以及存储的信息（可以在调试时使用）
+                      // console.log(`Selected Image: ${imgSrc}`);
+                      // console.log(`Theme Color: ${color}`);
+                      // console.log(`Brightness: ${brightness}`);
+
+                      const newUrl =  baseUrl + imgSrc
+                      console.log('新图片:', newUrl);
+                      localStorage.setItem(cacheKey, newUrl);
+                      return newUrl;
+                    }
+                  }
+
+                  function loadBanner() {
+
+                    if (!banner || banner.src){
+                      
+                      banner.style.display = 'block';
+
+                      banner.onerror = () => {
+                        localStorage.removeItem(cacheKey); // 清除无效缓存
+                        loadBanner(); // **重新尝试加载**
+                      };
+                      return; // **如果 banner 已经有 src，不再重复赋值**
+                    }
+                    
+                    const targetUrl = getBannerUrl();
+                    banner.src = targetUrl;
+
+                    banner.onload = () => {
+                      banner.style.display = 'block';
+                    };
+
+                    banner.onerror = () => {
+                      localStorage.removeItem(cacheKey); // 清除无效缓存
+                      loadBanner(); // **重新尝试加载**
+                    };
+                  }
+
+                  loadBanner();
+                }
+
+                // **首次加载**
+                document.addEventListener('DOMContentLoaded', initBanner);
+
+                // **监听 PJAX 事件**
+                document.addEventListener('pjax:complete', () => {
+                  setTimeout(initBanner, 100);  // 增加延迟，避免频繁重复加载
+                });
+
+                // **防止浏览器前进/后退导致图片丢失**
+                window.addEventListener('pageshow', initBanner);
+
+              })();
+
+            </script>
+            
+            
+                  
+                    <div id="header-outer">
+                      
+                      <div id="header-title" class="class-title">
+                        
+                        
+                            
+                            
+                              
+                                <a href="/" id="logo">
+                                  <h1 data-aos="slide-up">
+                                    归档
+                                  </h1>
+                                </a>
+                                
+                                  
+                                    
+                                        
+                                          <h2 id="subtitle-wrap"
+                                            data-aos="slide-down">
+                                            
+                                              <a href="/" id="subtitle">
+                                                2025
+                                              </a>
+                                              
+                                          </h2>
+                                          
+                      </div>
+                      <script>
+                        document.body.addEventListener('hideElements', () => {
+                          // 禁用 sidebar-wrapper 和 aplayer
+                          const sidebarElements = document.querySelectorAll('.class-title');
+                          sidebarElements.forEach(element => {
+                            element.style.transition = 'all 1s'; // 设置平滑过渡
+                            element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+                            element.style.opacity = '0'; // 设置透明度为0
+                          });
+                        })
+                        document.body.addEventListener('showElements', () => {
+                          // 禁用 sidebar-wrapper 和 aplayer
+                          const sidebarElements = document.querySelectorAll('.class-title');
+                          sidebarElements.forEach(element => {
+                            element.style.transition = 'all 1s'; // 设置平滑过渡
+                            element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+                            element.style.opacity = '1'; // 设置透明度为0
+                          });
+                        })
+                      </script>
+</div>
+</header>
+
+
+          <div id="rollbar">
+            <!-- 主页滚动容器 -->
+
+<script src="/js/scroll.js"></script>
+
+<div class="scroll-container">
+    <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      
+      
+        
+      
+      
+    </div>
+  </div>
+
+
+          </div>
+
+        <div id="content" class="sidebar-left"   style="margin-top:20px">
+          <aside id="sidebar">
+  
+  
+  <div class="sidebar-wrapper ">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="hitachiMaco" class="lazyload">
+  <div class="sidebar-author-name">hitachiMaco</div>
+  <div class="sidebar-description">技术分享</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">11</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/calendar" aria-label="日历"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">日历</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+    
+  
+</div>
+
+      
+      
+    </div>
+  </div>
+  <script>
+    document.body.addEventListener('hideElements', () => {
+      // 禁用 sidebar-wrapper 和 aplayer
+      const sidebarElements = document.querySelectorAll('.sidebar-wrapper');
+      sidebarElements.forEach(element => {
+        element.style.transition = 'all 1s'; // 设置平滑过渡
+        element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+        element.style.opacity = '0'; // 设置透明度为0
+      });
+      
+      // 如果 aplayer 存在，禁用并设置透明度为 0
+      const aplayer = document.querySelector('#aplayer');
+      if (aplayer) {
+        aplayer.style.transition = 'all 1s'; // 设置过渡效果
+        aplayer.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+        aplayer.style.opacity = '0'; // 设置透明度为0
+      }
+    });
+    document.body.addEventListener('showElements', () => {
+      const sidebarElements = document.querySelectorAll('.sidebar-wrapper');
+      sidebarElements.forEach(element => {
+        element.style.transition = 'all 1s'; // 设置平滑过渡
+        element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+        element.style.opacity = '1'; // 设置透明度为0
+      });
+      
+      const aplayer = document.querySelector('#aplayer');
+      if (aplayer) {
+        aplayer.style.transition = 'all 1s'; // 设置过渡效果
+        aplayer.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+        aplayer.style.opacity = '1'; // 设置透明度为0
+      }
+    });
+  </script>
+
+  <div class="sidebar-widget">
+  
+  </div>
+</aside>
+
+          <section id="main">
+              <!-- snake -->
+              <picture id="calendar-image" class="github-calendar">
+                <img fetchpriority="high" id="calendar-img" class="github-calendar-img" alt="github-snake" src="github-snake.svg" />
+              </picture>
+              <div class="archives-outer-wrap" data-aos="fade-up">
+                <div class="tag-wrap">
+                  
+                    <div class="archives-tag-list-item" data-aos="zoom-in">
+                      <a class="archives-tag-list-link" href="/tags/Test/">
+                        Test
+                      </a>
+                    </div>
+                    
+                    <div class="archives-tag-list-item" data-aos="zoom-in">
+                      <a class="archives-tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80/">
+                        基础
+                      </a>
+                    </div>
+                    
+                </div>
+                <div class="category-wrap">
+                  
+                    <div class="archives-category-list-item" data-aos="zoom-in">
+                      <a class="archives-category-list-link" href="/categories/Greeting/">
+                        Greeting
+                      </a>
+                    </div>
+                    
+                    <div class="archives-category-list-item" data-aos="zoom-in">
+                      <a class="archives-category-list-link" href="/categories/python/">
+                        python
+                      </a>
+                    </div>
+                    
+                    <div class="archives-category-list-item" data-aos="zoom-in">
+                      <a class="archives-category-list-link" href="/categories/python/%E7%AE%97%E6%B3%95/">
+                        算法
+                      </a>
+                    </div>
+                    
+                </div>
+                
+                  
+                    
+                      
+                        
+                            
+                              <section class="archives-wrap" data-aos="fade-up">
+                                <div class="archive-year-wrap">
+                                  <a href="/archives/2025" class="archive-year">
+                                    2025
+                                  </a>
+                                </div>
+                                <ul>
+                                  
+                                    <li class="archive-article">
+  <div class="archive-article-date-wrap">
+    <a href="/2025/02/07/hello-blog/">
+      <time class="dt-published" datetime="2025-02-07T08:48:21.000Z" itemprop="datePublished">02-07</time>
+    </a>
+  </div>
+  
+    <a class="archive-article-title" href="/2025/02/07/hello-blog/">hello blog!</a>
+  
+</li>
+
+                                      
+                                        
+                                </ul>
+                              </section>
+                              
+                              <script>
+                                // 你之前提供的 JavaScript 代码
+                                function updateCalendarImage() {
+                                  const theme = document.documentElement.getAttribute('data-theme');
+                                  const calendarImage = document.getElementById('calendar-image');
+                                  const img = document.getElementById('calendar-img');
+                              
+                                  const brightness = parseFloat(localStorage.getItem('brightness') || 0.5);
+                                  // 根据主题和亮度调整图片的显示
+                                  if (theme === 'dark') {
+                                    // 深色主题时，图片的亮度越小，日历要变得更亮
+                                    img.src = "https://raw.githubusercontent.com/hitachiMaco/hitachiMaco/9087614b37020bb4885abb26da8f8df52c8891ae/github-snake-dark.svg";
+                                    if (brightness>0.4){
+                                      const adjustedBrightness = 1
+                                    }else{
+                                      const adjustedBrightness = 1 + (1 - brightness) * 0.2; // brightness 越小，调整越亮
+                                    }
+
+                                    img.style.filter = `brightness(${adjustedBrightness})`;
+                                  } else{
+                                    // 浅色主题时，图片的亮度越大，日历要变得更暗
+                                    img.src = "https://raw.githubusercontent.com/hitachiMaco/hitachiMaco/9087614b37020bb4885abb26da8f8df52c8891ae/github-snake.svg";
+                                    if (brightness<0.6){
+                                      const adjustedBrightness = 1
+                                    }else{
+                                      const adjustedBrightness = 1 - (brightness - 0.5) * 0.4; // brightness 越大，调整越暗
+                                    }
+                                    img.style.filter = `brightness(${adjustedBrightness})`;
+                                  }
+                                }
+
+
+                              
+                                // 监听 data-theme 属性变化（在切换主题时更新图片）
+                                document.body.addEventListener('dark-theme-set', updateCalendarImage);
+                                document.body.addEventListener('light-theme-set', updateCalendarImage);
+                                
+                                // 初次加载时，根据当前的主题设置图片
+                                updateCalendarImage();
+                              </script>                              
+              </div>
+              
+                
+                  <nav id="page-nav" data-aos="fade-up">
+                    
+                      <a class="extend prev" rel="prev" href="/archives/2025/">&laquo; 上一页</a><a class="page-number" href="/archives/2025/">1</a><span class="page-number current">2</span>
+                  </nav>
+                  
+</section>
+        </div>
+        
+        
+          <meting-js
+            theme="var(--color-link)"
+            id="13282817727"
+            server="netease"
+            type="playlist"
+            
+            fixed="true"
+            
+            
+            order="random"
+            
+            volume="0.2"
+            
+            list-folded="true"
+          ></meting-js>
+        
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+          <div>
+            <span class="icon-copyright"></span>
+            2025-2025
+                <span class="footer-info-sep rotate"></span>
+                hitachiMaco
+          </div>
+          
+            <div>
+              基于&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer"
+                  target="_blank">Hexo</a>&nbsp;
+                Original Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu"
+                  rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+            </div>
+            
+              
+                <div>
+                  <span class="icon-brush"></span>
+                  3.8k
+                    &nbsp;|&nbsp;
+                    <span class="icon-coffee"></span>
+                    00:26
+                </div>
+                
+                  
+                      
+                          
+                            <div>
+                              <span class="icon-eye"></span>
+                              <span id="busuanzi_container_site_pv">
+                                总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                              </span>
+                              &nbsp;|&nbsp;
+                              <span class="icon-user"></span>
+                              <span id="busuanzi_container_site_uv">
+                                总访客量&nbsp;<span id="busuanzi_value_site_uv"></span>
+                              </span>
+                            </div>
+                            
+  </div>
+</footer>
+        
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-author">
+  <img data-src="/avatar/avatar.webp" data-sizes="auto" alt="hitachiMaco" class="lazyload">
+  <div class="sidebar-author-name">hitachiMaco</div>
+  <div class="sidebar-description">技术分享</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">11</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">3</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">2</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/calendar" aria-label="日历"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">日历</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+    
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+          &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+    
+  
+</div>
+
+    
+  </div>
+  
+</nav>
+
+    </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.1.0/dist/index.umd.js" integrity="sha384-KM6i7tu43nYd6e0beIljxHMC5tZc58XBDu7pPA58w50h18Jsx7gLdimfS09RXlKv" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  <script>
+    function loadScripts(scripts, index) {
+      if (index < scripts.length) {
+        const script = scripts[index];
+        const src = script.getAttribute('src');
+
+        const loadScript = (scriptContent) => {
+          const scriptElement = document.createElement('script');
+          if (script.type) {
+            scriptElement.type = script.type;
+          }
+          scriptElement.text = scriptContent;
+          document.head.appendChild(scriptElement);
+          loadScripts(scripts, index + 1);
+        }
+
+        if (src) {
+          fetch(src)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+              }
+              return response.text();
+            })
+            .then(scriptContent => {
+              loadScript(scriptContent);
+            })
+            .catch(error => {
+              console.error('Failed to load script:', src, error);
+            });
+        } else {
+          loadScript(script.text);
+        }
+      }
+    }
+    window.Pjax && new window.Pjax({
+      selectors: [
+        "#header>img",
+        "#header>picture",
+        "head title",
+        "#header-title",
+        "#subtitle-wrap",
+        "#main",
+        "#content",
+        ".sidebar-widget",
+        ".sidebar-wrapper",
+        '#mobile-nav',
+        '#lazy-script'
+      ],
+      switches: {
+        "#content": function(oldEl, newEl) {
+          // for sidebar change
+          oldEl.className = newEl.className;
+          this.onSwitch();
+        },
+        "#header-title": Pjax.switches.outerHTML,
+        "#subtitle-wrap": Pjax.switches.outerHTML,
+        "#main": function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.outerHTML = newEl.outerHTML
+          this.onSwitch()
+        },
+        "#mobile-nav": Pjax.switches.outerHTML,
+        '#lazy-script': function(oldEl, newEl) {
+          const scripts = [...newEl.querySelectorAll('script')];
+          loadScripts(scripts, 0);
+          oldEl.innerHTML = newEl.innerHTML
+          this.onSwitch()
+        },
+      },
+      cacheBust: false
+    })
+  </script>
+  
+<script src="/js/pjax.js"></script>
+
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/quicklink@2.3.0/dist/quicklink.umd.js" integrity="sha384-aD7FsuQkS1ohgFKY41fJfeA+Wd&#x2F;QRNnrOd9Bs58K3FzKdJJv8yPnYU8Tnp5z1agS" crossorigin="anonymous"></script>
+
+  <script data-pjax>
+    window.quicklink?.listen({
+      timeout: 3000,
+      priority: true,
+      ignores: []
+    });
+  </script>
+
+
+<div id="lazy-script">
+  <div>
+       
+    
+    
+      
+    
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.3.1' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/aplayer@1.10.1/dist/APlayer.min.js" integrity="sha384-gdGYZwHnfJM54evoZhpO0s6ZF5BQiybkiyW7VXr+h5UfruuRL&#x2F;aORyw+5+HZoU6e" crossorigin="anonymous"></script>
+
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/meting@2.0.1/dist/Meting.min.js" integrity="sha384-ASVlpKF80A22OXTK3tfEjZm1EL6uFMKIC4p8+0maanw1S&#x2F;IyB+Y4JG+ZDU7GpKE8" crossorigin="anonymous"></script>
+
+  
+
+
+  </body>
+  </html>
+

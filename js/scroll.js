@@ -1,7 +1,15 @@
 let flipped = false;  // 用于记录图片是否已经翻转过
 let isProcessing = false;  // 用于防止重复点击和 hover
 
+let isHovering = false; // 用于判断是否有图片被 hover
+let scrollSpeed = 0.1; // 设定滚动速度
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  let track = document.querySelector('.image-track'); // 获取图片容器
+  // 每帧调用 scrollImages 实现连续滚动
+  let scrollInterval = setInterval(scrollImages, 16); // 60fps大约每16ms调用一次
+
   document.querySelectorAll('.image-item').forEach(item => {
     // 给每个图片设置随机倾斜并保存在自定义属性中
     const randomRotation = Math.random() * 10 - 5; // 随机倾斜角度，范围是 -5 到 5 度
@@ -16,6 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {}, 1000);
         return 
       }
+      isHovering = true;  // 鼠标进入时，暂停滚动
+      clearInterval(scrollInterval);  // 停止滚动
       // 鼠标 hover 时，放大并恢复当前图片垂直
       item.style.transform = `scale(1.1) rotate(0deg)`; // 只改变当前图片的缩放，旋转恢复为0
   
@@ -38,10 +48,30 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(() => {}, 1000); 
           return
         }
+        isHovering = false;  // 鼠标离开时，恢复滚动
+        scrollInterval = setInterval(scrollImages, 16);  // 恢复滚动
         img.style.transform = `rotate(${img.dataset.initialRotation}deg) translateX(0)`;  // 恢复旋转并重置位置
       });
     });
   });
+
+
+
+function scrollImages() {
+  if (!isHovering) {
+    // 当前滚动的位置
+    const currentScroll = track.scrollLeft;
+    // 更新滚动位置，实现缓慢滚动
+    track.scrollLeft = currentScroll + scrollSpeed;
+    
+    // 图片队列循环的效果
+    if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
+      track.scrollLeft = 0; // 当到达尾部时，重新从头开始
+    }
+  }
+}
+
+
 })
 
 document.addEventListener('DOMContentLoaded', () => {
