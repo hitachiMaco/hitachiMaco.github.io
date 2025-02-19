@@ -126,7 +126,10 @@
 
     <div id="container">
       <div id="wrap">
-        <div id="header-nav" class="boss">
+        
+<script src="/js/prevent_scroll.js"></script>
+
+<div id="header-nav" class="boss">
   <nav id="main-nav">
     
             
@@ -381,30 +384,18 @@
                           });
                         })
                       </script>
+                      <div class="background-bar-top"></div>
 </div>
 </header>
-
-
-          <div id="rollbar">
-            <!-- 主页滚动容器 -->
-
-<script src="/js/scroll.js"></script>
-
-<div class="scroll-container">
-    <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-      
-      
-        
-      
-      
-    </div>
-  </div>
-
-
-          </div>
-
-        <div id="content" class="sidebar-left"   style="margin-top:20px">
-          <aside id="sidebar">
+<div class="down-icon">
+  <img class="arrow1" src="../assets/icons/arrow_down.png"></img>
+  <img class="arrow2" src="../assets/icons/arrow_down.png"></img>
+</div>
+        <div class="bottom" style="position: relative; width: 100%;">
+          <div class="background-bar-bottom"></div>
+        <div id="content" style="padding-top: 10vh;" class="sidebar-left"  >
+          
+            <aside id="sidebar">
   
   
   <div class="sidebar-wrapper ">
@@ -418,7 +409,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">11</div>
+    <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
@@ -522,18 +513,201 @@
   </div>
 </aside>
 
-          <section id="main">
+          
+          <section id="main" style="padding-top: 2vh;margin-left: 5vw;max-width: 40vw;max-height: 82vh;overflow: hidden;">
   
+    <div class="post-categories-wrapper" data-aos="fade-up">
+      
+        
+          <div class="post-categories-wrap">
+            
+              <a class="post-link" href="/categories/python" aria-label=""></a>
+              <div class="post-categories-cover">
+                
+                  <img data-src="/assets/categories/python.webp" data-sizes="auto" alt="python"
+                    class="lazyload">
+                  
+                              <h2>
+                                python
+                              </h2>
+                              <h3>
+                                1 篇文章
+                              </h3>
+              </div>
+          </div>
+          
+            
+        
+          <div class="post-categories-wrap">
+            
+              <a class="post-link" href="/categories/%E8%80%83%E7%A0%94" aria-label=""></a>
+              <div class="post-categories-cover">
+                
+                  <img data-src="/assets/categories/kaoyan.webp" data-sizes="auto" alt="考研"
+                    class="lazyload">
+                  
+                              <h2>
+                                考研
+                              </h2>
+                              <h3>
+                                0 篇文章
+                              </h3>
+              </div>
+          </div>
+          
+            
+        
+          <div class="post-categories-wrap">
+            
+              <a class="post-link" href="/categories/%E5%89%8D%E7%AB%AF" aria-label=""></a>
+              <div class="post-categories-cover">
+                
+                  <img data-src="/assets/categories/javascript.webp" data-sizes="auto" alt="前端"
+                    class="lazyload">
+                  
+                              <h2>
+                                前端
+                              </h2>
+                              <h3>
+                                0 篇文章
+                              </h3>
+              </div>
+          </div>
+          
+            
+        
+          <div class="post-categories-wrap">
+            
+              <a class="post-link" href="/categories/%E6%97%A5%E5%B8%B8" aria-label=""></a>
+              <div class="post-categories-cover">
+                
+                  <img data-src="/assets/categories/nihongo.webp" data-sizes="auto" alt="日常"
+                    class="lazyload">
+                  
+                              <h2>
+                                日常
+                              </h2>
+                              <h3>
+                                0 篇文章
+                              </h3>
+              </div>
+          </div>
+          
+            
+        
+          <div class="post-categories-wrap">
+            
+              <a class="post-link" href="/categories/%E5%90%8E%E7%AB%AF" aria-label=""></a>
+              <div class="post-categories-cover">
+                
+                  <img data-src="/assets/categories/django.webp" data-sizes="auto" alt="后端"
+                    class="lazyload">
+                  
+                              <h2>
+                                后端
+                              </h2>
+                              <h3>
+                                0 篇文章
+                              </h3>
+              </div>
+          </div>
+          
+            
+        
+          <div class="post-categories-wrap">
+            
+              <a class="post-link" href="/categories/%E6%9D%82%E8%B0%88" aria-label=""></a>
+              <div class="post-categories-cover">
+                
+                  <img data-src="/assets/categories/nvidia.webp" data-sizes="auto" alt="杂谈"
+                    class="lazyload">
+                  
+                              <h2>
+                                杂谈
+                              </h2>
+                              <h3>
+                                0 篇文章
+                              </h3>
+              </div>
+          </div>
+          
+            
+    </div>
+    
 
                           <!-- 这里是主页下方矩形块 -->
-        
-        <div class="post-wrapper">
+
+        <!-- <div class="post-wrapper">
   <div class="post-wrap-left" data-aos="fade-up">
+          
+              <a class="post-link" href="/2025/02/08/python%E4%B8%AD%E7%9A%84-XX/" aria-label="python中的.__XX__"></a>
+              
+                
+                    <div class="post-cover-left">
+                          
+                            <img data-src="/assets/images/2025-02-08.jpg" data-sizes="auto"
+                              alt="python中的.__XX__" class="lazyload">
+                            
+                    </div>
+                    <div class="post-info">
+                      <div class="post-meta">
+                        <span><span class="icon-calendar"></span>2025-02-08</span>
+                        <span><span class="icon-pencil"></span>
+                          3.8k 字
+                        </span>
+                        <span><span class="icon-clock"></span>
+                          16 分钟
+                        </span>
+                      </div>
+                      <h2 class="post-title">
+                        python中的.__XX__
+                      </h2>
+                      <article class="post-article">
+                        
+                              0. 前言
+Python中对于一个类来说，有着非常多的魔法方法（以__XX__方法进行定义），这些方法在Python解释器中会被特殊的事件所触发调用。按需了解并使用这些魔法方法，对于加深我们对Python解释器在特定时刻到底是如何执行的有很大帮助。
+
+1. 构造、初始化与对象创建1.1 __init__(self, …)
+适用场景：在创建对象（例如模型、数据结构、算法对象）时为其传入初始参数。
+
+示例代码：
+1234567891011class LinearModel:    def __init__(self, weights, bias):        self.weights = we
+                                
+                      </article>
+                    </div>
+  </div>
+</div>
+<script>
+  document.body.addEventListener('hideElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'none'; // 禁止所有鼠标事件
+      element.style.opacity = '0'; // 设置透明度为0
+    });
+  })
+  document.body.addEventListener('showElements', () => {
+    // 禁用 sidebar-wrapper 和 aplayer
+    const sidebarElements = document.querySelectorAll('.post-wrapper');
+    sidebarElements.forEach(element => {
+      element.style.transition = 'all 1s'; // 设置平滑过渡
+      element.style.pointerEvents = 'auto'; // 禁止所有鼠标事件
+      element.style.opacity = '1'; // 设置透明度为0
+    });
+  })
+</script>
+ -->
+
+                              <!-- 这里是主页下方矩形块 -->
+
+        <!-- <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
           
               <a class="post-link" href="/2025/02/07/hello-blog/" aria-label="hello blog!"></a>
               
                 
-                    <div class="post-cover-left">
+                    <div class="post-cover-right">
                           
                             <img data-src="/assets/images/2025-02-07.jpg" data-sizes="auto"
                               alt="hello blog!" class="lazyload">
@@ -582,18 +756,19 @@
     });
   })
 </script>
+ -->
 
-        
           
             
-                
+                <!-- 
                   <nav id="page-nav" data-aos="fade-up">
                     
                       <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
                   </nav>
-                  
+                   -->
 </section>
         </div>
+      </div>
         
         
           <meting-js
@@ -638,7 +813,7 @@
                   3.8k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
-                    00:26
+                    00:27
                 </div>
                 
                   
@@ -677,7 +852,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">11</div>
+    <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>

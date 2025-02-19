@@ -127,7 +127,10 @@
 
     <div id="container">
       <div id="wrap">
-        <div id="header-nav" class="boss">
+        
+<script src="/js/prevent_scroll.js"></script>
+
+<div id="header-nav" class="boss">
   <nav id="main-nav">
     
             
@@ -378,30 +381,18 @@
                           });
                         })
                       </script>
+                      <div class="background-bar-top"></div>
 </div>
 </header>
-
-
-          <div id="rollbar">
-            <!-- 主页滚动容器 -->
-
-<script src="/js/scroll.js"></script>
-
-<div class="scroll-container">
-    <div class="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-      
-      
-        
-      
-      
-    </div>
-  </div>
-
-
-          </div>
-
-        <div id="content" class="sidebar-left"   style="margin-top:20px">
-          <aside id="sidebar">
+<div class="down-icon">
+  <img class="arrow1" src="../assets/icons/arrow_down.png"></img>
+  <img class="arrow2" src="../assets/icons/arrow_down.png"></img>
+</div>
+        <div class="bottom" style="position: relative; width: 100%;">
+          <div class="background-bar-bottom"></div>
+        <div id="content" style="padding-top: 10vh;" class="sidebar-left"  >
+          
+            <aside id="sidebar">
   
   
   <div class="sidebar-wrapper ">
@@ -415,7 +406,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">11</div>
+    <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
@@ -519,7 +510,8 @@
   </div>
 </aside>
 
-          <section id="main">
+          
+          <section id="main" style="padding-top: 2vh;margin-left: 5vw;max-width: 40vw;max-height: 82vh;overflow: hidden;">
               <!-- snake -->
               <picture id="calendar-image" class="github-calendar">
                 <img fetchpriority="high" id="calendar-img" class="github-calendar-img" alt="github-snake" src="github-snake.svg" />
@@ -577,6 +569,20 @@
                                   
                                     <li class="archive-article">
   <div class="archive-article-date-wrap">
+    <a href="/2025/02/08/python%E4%B8%AD%E7%9A%84-XX/">
+      <time class="dt-published" datetime="2025-02-08T04:23:20.000Z" itemprop="datePublished">02-08</time>
+    </a>
+  </div>
+  
+    <a class="archive-article-title" href="/2025/02/08/python%E4%B8%AD%E7%9A%84-XX/">python中的.__XX__</a>
+  
+</li>
+
+                                      
+                    
+                      
+                                    <li class="archive-article">
+  <div class="archive-article-date-wrap">
     <a href="/2025/02/07/hello-blog/">
       <time class="dt-published" datetime="2025-02-07T08:48:21.000Z" itemprop="datePublished">02-07</time>
     </a>
@@ -592,7 +598,6 @@
                               </section>
                               
                               <script>
-                                // 你之前提供的 JavaScript 代码
                                 function updateCalendarImage() {
                                   const theme = document.documentElement.getAttribute('data-theme');
                                   const calendarImage = document.getElementById('calendar-image');
@@ -633,14 +638,15 @@
                               </script>                              
               </div>
               
-                
+                <!-- 
                   <nav id="page-nav" data-aos="fade-up">
                     
                       <a class="extend prev" rel="prev" href="/archives/">&laquo; 上一页</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
                   </nav>
-                  
+                   -->
 </section>
         </div>
+      </div>
         
         
           <meting-js
@@ -685,7 +691,7 @@
                   3.8k
                     &nbsp;|&nbsp;
                     <span class="icon-coffee"></span>
-                    00:26
+                    00:27
                 </div>
                 
                   
@@ -724,7 +730,7 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">11</div>
+    <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>

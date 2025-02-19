@@ -1,8 +1,9 @@
 let flipped = false;  // 用于记录图片是否已经翻转过
 let isProcessing = false;  // 用于防止重复点击和 hover
+let isScrolling = false;
 
 let isHovering = false; // 用于判断是否有图片被 hover
-let scrollSpeed = 0.1; // 设定滚动速度
+let scrollSpeed = 10; // 设定滚动速度
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.image-item').forEach(item => {
     // 给每个图片设置随机倾斜并保存在自定义属性中
-    const randomRotation = Math.random() * 10 - 5; // 随机倾斜角度，范围是 -5 到 5 度
+    const randomRotation = 0; // 随机倾斜角度，范围是 -5 到 5 度
     item.dataset.initialRotation = randomRotation; // 将初始倾斜角度存储到自定义属性中
   
     // 初始状态倾斜
@@ -58,16 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function scrollImages() {
-  if (!isHovering) {
+  if (!isScrolling && !isHovering) {
+    isScrolling = true
     // 当前滚动的位置
     const currentScroll = track.scrollLeft;
     // 更新滚动位置，实现缓慢滚动
     track.scrollLeft = currentScroll + scrollSpeed;
+    console.log(currentScroll,track.scrollLeft)
     
     // 图片队列循环的效果
     if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
       track.scrollLeft = 0; // 当到达尾部时，重新从头开始
     }
+
+    setTimeout(() => {
+      isScrolling = false
+    }, 1000);
   }
 }
 
@@ -178,4 +185,21 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
   });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log(1212)
+  const imageTrack = document.querySelector('.image-track');
+  
+  // 复制图片到尾部来创建循环效果
+  const imageItems = document.querySelectorAll('.image-item');
+  const totalWidth = Array.from(imageItems).reduce((acc, item) => acc + item.offsetWidth, 0);
+  
+  imageTrack.style.width = `${totalWidth * 2}px`; // 让容器的宽度是两倍，确保滚动无缝衔接
+  
+  // 通过JS让页面加载时就能调整动画，使得滚动效果更流畅
+  setTimeout(() => {
+    imageTrack.style.animation = 'scroll-left 20s linear infinite'; // 开始滚动
+  }, 100);
 });
