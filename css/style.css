@@ -2655,8 +2655,8 @@ pre .javascript .function {
 .article-imgs {
   width: 100%;
   height: auto;
-  padding: 8px;
-  border-radius: 40px;
+  margin: 8px 0px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .article-line {
