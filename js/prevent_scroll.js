@@ -51,7 +51,9 @@ function enableScroll() {
 
 document.addEventListener('DOMContentLoaded', function() {
     disableScroll()
+    const container = document.querySelector('.phone-container');
     document.addEventListener('wheel', function (e) {
+      if (!container.contains(e.target)) {
         if (e.deltaY > 0) {
           // 向下滚动
           if (window.scrollY <= window.innerHeight) {
@@ -73,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
           }
         }
+      }
     })
 });
 document.addEventListener('DOMContentLoaded', function() {
