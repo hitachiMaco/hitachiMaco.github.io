@@ -19,7 +19,7 @@
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_bq08450reo';window.REIMU_CONFIG.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};window.REIMU_CONFIG.code_block = {"expand":30};</script>
   
   <title>
-    2-20 |
+    KMP算法——字符串匹配问题 |
     
     Harry
   </title>
@@ -34,17 +34,21 @@
 
   
   
-    <meta name="description" content="寒假最后完整的一天！这似乎是有史以来开学前我心态最好的一次，赢！还得是崩铁节奏有趣，极大缓解了我临近开学的痛苦。 嘻嘻（强颜欢笑罢了zzz）。">
+    <meta name="description" content="KMP算法介绍KMP算法（Knuth-Morris-Pratt算法）是一种高效的字符串匹配算法，由D.E.Knuth、J.H.Morris和V.R.Pratt三位计算机科学家共同提出。 KMP算法的核心在于利用已经匹配过的部分信息，避免在匹配失败时重新从模式串的开头开始匹配。具体来说，当主串和模式串的某个字符不匹配时，KMP算法会根据模式串的部分匹配表(PMT表)来移动模式串，而不是像暴力匹配算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2-20">
-<meta property="og:url" content="https://hitachimaco.github.io/2025/02/20/2-20/index.html">
+<meta property="og:title" content="KMP算法——字符串匹配问题">
+<meta property="og:url" content="https://hitachimaco.github.io/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Harry">
-<meta property="og:description" content="寒假最后完整的一天！这似乎是有史以来开学前我心态最好的一次，赢！还得是崩铁节奏有趣，极大缓解了我临近开学的痛苦。 嘻嘻（强颜欢笑罢了zzz）。">
+<meta property="og:description" content="KMP算法介绍KMP算法（Knuth-Morris-Pratt算法）是一种高效的字符串匹配算法，由D.E.Knuth、J.H.Morris和V.R.Pratt三位计算机科学家共同提出。 KMP算法的核心在于利用已经匹配过的部分信息，避免在匹配失败时重新从模式串的开头开始匹配。具体来说，当主串和模式串的某个字符不匹配时，KMP算法会根据模式串的部分匹配表(PMT表)来移动模式串，而不是像暴力匹配算法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-02-20T08:13:14.000Z">
-<meta property="article:modified_time" content="2025-02-20T15:12:50.067Z">
+<meta property="og:image" content="https://hitachimaco.github.io/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/1.webp">
+<meta property="og:image" content="https://hitachimaco.github.io/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/2.webp">
+<meta property="article:published_time" content="2025-02-24T06:41:56.000Z">
+<meta property="article:modified_time" content="2025-02-24T07:26:03.606Z">
 <meta property="article:author" content="hitachiMaco">
+<meta property="article:tag" content="进阶">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hitachimaco.github.io/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/1.webp">
   
   
     <link rel="alternate" href="/atom.xml" title="Harry" type="application/atom+xml">
@@ -236,7 +240,7 @@
 <header id="header">
   
       <picture></picture>
-      <img fetchpriority="high" src="/assets/images/dairy/default.webp" alt="2-20">
+      <img fetchpriority="high" src="/assets/images/post/%3C%25=%20page.date.format('YYYY-MM-DD')%20%25%3E.webp" alt="KMP算法——字符串匹配问题">
       
                     <div id="header-outer">
                       
@@ -248,7 +252,7 @@
                               
                                 <a href="/" id="logo">
                                   <h1 data-aos="slide-up">
-                                    2-20
+                                    KMP算法——字符串匹配问题
                                   </h1>
                                 </a>
                                 
@@ -304,7 +308,7 @@
   </h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-            
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#KMP%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="toc-text">KMP算法介绍</span></a></li></ol>
               
   </div>
 </div></div>
@@ -427,17 +431,21 @@
 
           
           
-            <section id="main"><article id="post-2-20" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+            <section id="main"><article id="post-KMP算法——字符串匹配问题" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
-  <a href="/2025/02/20/2-20/" class="article-date-link" data-aos="zoom-in">
-    <time datetime="2025-02-20T08:13:14.000Z" itemprop="datePublished">2025-02-20</time>
-    <time style="display: none;" id="post-update-time">2025-02-20</time>
+  <a href="/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2025-02-24T06:41:56.000Z" itemprop="datePublished">2025-02-24</time>
+    <time style="display: none;" id="post-update-time">2025-02-24</time>
   </a>
 </div>
 
       
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/" data-aos="zoom-in">python</a>
+  </div>
+
 
     </div>
     <div class="hr-line"></div>
@@ -446,8 +454,19 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <p>寒假最后完整的一天！这似乎是有史以来开学前我心态最好的一次，赢！还得是崩铁节奏有趣，极大缓解了我临近开学的痛苦。</p>
-<p>嘻嘻（强颜欢笑罢了zzz）。</p>
+        <h3 id="KMP算法介绍"><a href="#KMP算法介绍" class="headerlink" title="KMP算法介绍"></a>KMP算法介绍</h3><p><strong>KMP算法（Knuth-Morris-Pratt算法）</strong>是一种高效的字符串匹配算法，由D.E.Knuth、J.H.Morris和V.R.Pratt三位计算机科学家共同提出。</p>
+<p>KMP算法的核心在于利用已经匹配过的部分信息，避免在匹配失败时重新从模式串的开头开始匹配。具体来说，当主串和模式串的某个字符不匹配时，KMP算法会根据模式串的<code>部分匹配表(PMT表)</code>来移动模式串，而不是像暴力匹配算法那样重新从模式串的开头开始匹配。</p>
+<p>PMT表的长度等于待匹配的（短的）字符串的长度，表明了从字符串左端开始，不同长度字符串的前缀与后缀交集中的最长的元素长度。如字符串”ababa”，它的前缀集合为{”a”, ”ab”, ”aba”, ”abab”}，它的后缀集合为{”baba”, ”aba”, ”ba”, ”a”}， 两个集合的交集为{”a”, ”aba”}，其中最长的元素为”aba”，长度为3。</p>
+<p><img src="/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/1.webp"></p>
+<center>i、j表示当前正在比较的两个字符</center> 
+
+<p><img src="/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/2.webp"></p>
+<ul>
+<li>如果两个字符串在<code>j</code>位失配，那么影响<code>j</code>指针回溯的位置的其实是第<code>j−1</code>位的 PMT 值，所以为了编程的方便，我们不直接使用PMT数组，而是将PMT数组向后偏移一位。我们把新得到的这个数组称为next数组。<blockquote>
+<p>失配：失去匹配</p>
+</blockquote>
+</li>
+</ul>
 
       
     </div>
@@ -455,7 +474,7 @@
       
         <blockquote class="article-copyright">
     <p><strong><span class="icon-user icon"></span>本文作者：</strong>hitachiMaco @ Harry</p>
-    <p><strong><span class="icon-link icon"></span>本文链接：</strong><a href="https://hitachimaco.github.io/2025/02/20/2-20/">https://hitachimaco.github.io/2025/02/20/2-20/</a></p>
+    <p><strong><span class="icon-link icon"></span>本文链接：</strong><a href="https://hitachimaco.github.io/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/">https://hitachimaco.github.io/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/</a></p>
     
     
     
@@ -471,41 +490,27 @@
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6/" rel="tag">进阶</a></li></ul>
+
 
     </footer>
   </div>
   
   <nav id="article-nav" data-aos="fade-up">
     
-      <div class="article-nav-link-wrap article-nav-link-left">
-        
-          <img data-src="/assets/images/dairy/default.webp" data-sizes="auto"
-            alt="2-24" class="lazyload">
-          
-                      <a href="/2025/02/24/2-24/"></a>
-                      <div class="article-nav-caption">
-                        前一篇
-                      </div>
-                      <h3 class="article-nav-title">
-                        
-                          2-24
-                            
-                      </h3>
-      </div>
-      
         
           <div class="article-nav-link-wrap article-nav-link-right">
             
-              <img data-src="/assets/images/post/2025-02-08.jpg" data-sizes="auto"
-                alt="python中的.__XX__" class="lazyload">
+              <img data-src="/assets/images/dairy/default.webp" data-sizes="auto"
+                alt="2-24" class="lazyload">
               
-                          <a href="/2025/02/08/python%E4%B8%AD%E7%9A%84-XX/"></a>
+                          <a href="/2025/02/24/2-24/"></a>
                           <div class="article-nav-caption">
                             后一篇
                           </div>
                           <h3 class="article-nav-title">
                             
-                              python中的.__XX__
+                              2-24
                                 
                           </h3>
           </div>
@@ -604,7 +609,7 @@
   </h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-            
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#KMP%E7%AE%97%E6%B3%95%E4%BB%8B%E7%BB%8D"><span class="toc-text">KMP算法介绍</span></a></li></ol>
               
   </div>
 </div></div>
@@ -845,14 +850,14 @@
       <script data-pjax>
         window.REIMU_POST = {
           author: "hitachiMaco",
-          title: "2-20",
-          url: "https://hitachimaco.github.io/2025/02/20/2-20/",
+          title: "KMP算法——字符串匹配问题",
+          url: "https://hitachimaco.github.io/2025/02/24/KMP%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98/",
           excerpt: "",
           description: "",
-          stripContent: "寒假最后完整的一天！这似乎是有史以来开学前我心态最好的一次，赢！还得是崩铁节奏有趣，极大缓解了我临近开学的痛苦。 嘻嘻（强颜欢笑罢了zzz）。 ",
-          date: "Thu Feb 20 2025 16:13:14 GMT+0800",
-          updated: "Thu Feb 20 2025 23:12:50 GMT+0800",
-          cover: "/assets/images/dairy/default.webp",
+          stripContent: "KMP算法介绍KMP算法（Knuth-Morris-Pratt算法）是一种高效的字符串匹配算法，由D.E.Knuth、J.H.Morris和V.R.Pratt三位计算机科学家共同提出。 KMP算法的核心在于利用已经匹配过的部分信息，避免在匹配失败时重新从模式串的开头开始匹配。具体来说，当主串和模式串的某个字符不匹配时，KMP算法会根据模式串的部分匹配表(PMT表)来移动模式串，而不是像暴力匹配算法那样重新从模式串的开头开始匹配。 PMT表的长度等于待匹配的（短的）字符串的长度，表明了从字符串左端",
+          date: "Mon Feb 24 2025 14:41:56 GMT+0800",
+          updated: "Mon Feb 24 2025 15:26:03 GMT+0800",
+          cover: "/assets/images/post/%3C%25=%20page.date.format('YYYY-MM-DD')%20%25%3E.webp",
         };
       </script>
        

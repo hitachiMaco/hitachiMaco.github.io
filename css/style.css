@@ -2590,7 +2590,7 @@ pre .javascript .function {
 .content-box::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
-.article {
+.phone-article {
   position: relative;
   padding: 0px 10px;
   width: 100%;
